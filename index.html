@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and drop Implementation</title>
+  </head>
+  <body>
+    <div class="inputGroupContainer d-flex flex-column align-items-start">
+      <!-- Registered Email Address -->
+      <label style="font-weight: 600 !important" class="mb-1"
+        >Registered Email Address</label
+      >
+      <input
+        class="inputTypeText"
+        type="email"
+        @focusout="validateEmail"
+        placeholder="Please Write Email Address"
+      />
+      <p v-if="showWarning" class="text-danger pt-2 mb-0"
+        >Please Enter A Valid Email</p
+      >
+      <p v-if="showIsValid" class="text-success pt-2 mb-0">Valid Email</p>
+    </div>
+  </body>
+</html>
